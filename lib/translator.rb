@@ -9,7 +9,7 @@ def load_library(file_path)
   }
 
   emoticons.each do |english_word, emoticon_ary|
-    print('hi')
+    print 'hi'
     # get_meaning_dict = emoticon_translations[get_meaning]
     # get_meaning_dict[emoticon_ary[1]] = [english_word]
   end
