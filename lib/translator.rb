@@ -3,29 +3,29 @@ require 'yaml'
 def load_library(file_path)
   emoticons = YAML.load_file(file_path)
   
-  emoticon_translations = {
-    get_meaning: {},
-    get_emoticon: {}
-  }
+#   emoticon_translations = {
+#     get_meaning: {},
+#     get_emoticon: {}
+#   }
 
 
-# traverse the hash "emoticons"
-  emoticons.each do |english_word, emoticon_ary|
+# # traverse the hash "emoticons"
+#   emoticons.each do |english_word, emoticon_ary|
 
-    #get_meaning
-      # input: japan_emoticon, output: english word
+#     #get_meaning
+#       # input: japan_emoticon, output: english word
     
-    get_meaning_dict = emoticon_translations[get_meaning]
+#     get_meaning_dict = emoticon_translations[get_meaning]
     
-    # english word = japan_emoticon
+#     # english word = japan_emoticon
     
-    get_meaning_dict[emoticon_ary[1]] = [english_word]
+#     get_meaning_dict[emoticon_ary[1]] = [english_word]
         
-    get_emoticon_dict = emoticon_translations[get_emoticon]
+#     get_emoticon_dict = emoticon_translations[get_emoticon]
     
-    get_emoticon_dict[emoticon_ary[0]] = [emoticon_ary[1]]
+#     get_emoticon_dict[emoticon_ary[0]] = [emoticon_ary[1]]
 
-  end
+#   end
 end
 
 
