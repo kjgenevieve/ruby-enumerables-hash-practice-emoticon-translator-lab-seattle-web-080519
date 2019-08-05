@@ -7,6 +7,21 @@ def load_library(file_path)
     get_meaning: {},
     get_emoticon: {}
   }
+
+
+# traverse the hash "emoticons"
+  emoticons.each do |english_word, emoticons|
+    
+  #for every emoticon
+    #get_meaning
+      # input: japan_emoticon, output: english word
+        #japan_emoticon = english word
+        
+      
+    #get_emoticon
+      #input: eng_emoticon, output: japan_emoticon
+
+  end
 end
 
 
