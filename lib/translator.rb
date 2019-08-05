@@ -4,11 +4,11 @@ def load_library(file_path)
   emoticons = YAML.load_file(file_path)
   
   emoticon_translations = {
-    get_meaning: {
+    'get_meaning': {
       # english_word => japan_emoticon
       
     },
-    get_emoticon: {}
+    'get_emoticon': {}
   }
 
 
