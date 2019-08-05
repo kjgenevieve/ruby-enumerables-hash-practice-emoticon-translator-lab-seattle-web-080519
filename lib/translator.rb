@@ -10,12 +10,17 @@ def load_library(file_path)
 
   emoticons.each do |english_word, emoticon_ary|
     get_meaning_dict = emoticon_translations[get_meaning]
-    get_meaning_dict[emoticon_ary[1]] = [english_word]
+    get_meaning_dict[emoticon_ary[1]] = english_word
   end
   
-  emoticons.each do |key,value|
-  new_hash['get_emoticon'][value[0]] = emoticons[key][1]
-  new_hash['get_meaning'][value[1]] = key
+  # emoticons.each do |english_word, emoticon_ary|
+  # emoticon_translations['get_meaning'][emoticon_ary[1]] = english_word
+
+
+
+
+  # emoticon_translations['get_emoticon'][emoticon_ary[0]] = emoticons[english_word][1]
+
   end
         
 # #     get_emoticon_dict = emoticon_translations[get_emoticon]
