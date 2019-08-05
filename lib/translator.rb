@@ -10,12 +10,12 @@ def load_library(file_path)
 
 
 # traverse the hash "emoticons"
-  emoticons.each do |english_word, emoticons|
-    
-  #for every emoticon
+  emoticons.each do |english_word, emoticon_ary|
+    # english word = japan_emoticon
+    emoticons[key] = emoticons[value[1]]
+  
     #get_meaning
       # input: japan_emoticon, output: english word
-        #japan_emoticon = english word
         
       
     #get_emoticon
