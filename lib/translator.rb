@@ -17,13 +17,19 @@ def load_library(file_path)
 
     #get_meaning
       # input: japan_emoticon, output: english word
+    
     get_meaning_dict = emoticon_translations[get_meaning]
+    
     # english word = japan_emoticon
+    
     get_meaning_dict[emoticon_ary[1]] = [english_word]
         
       
     #get_emoticon
       #input: eng_emoticon, output: japan_emoticon
+    get_emoticon_dict = emoticon_translations[get_emoticon]
+    
+    get_emoticon_dict[emoticon_ary[0]] = [emoticon_ary[1]]
 
   end
 end
