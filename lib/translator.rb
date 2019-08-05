@@ -1,44 +1,30 @@
-require 'yaml'
-  
-def load_library(file_path)
+require "yaml"
+
+def load_library	def load_library(file_path)
   emoticons = YAML.load_file(file_path)
-  
-  emoticon_translations = {
-    get_meaning: {},
-    get_emoticon: {}
+
+   new_hash = {
+    'get_meaning' => {},
+    'get_emoticon' => {}
   }
 
-  emoticons.each do |english_word, emoticon_ary|
-    get_meaning_dict = emoticon_translations[get_meaning]
-    get_meaning_dict[emoticon_ary[1]] = english_word
+   emoticons.each do |key,value|
+    new_hash['get_emoticon'][value[0]] = emoticons[key][1]
+    new_hash['get_meaning'][value[1]] = key
   end
-  
-  # emoticons.each do |english_word, emoticon_ary|
-  # emoticon_translations['get_meaning'][emoticon_ary[1]] = english_word
 
-
-
-
-  # emoticon_translations['get_emoticon'][emoticon_ary[0]] = emoticons[english_word][1]
-        
-# #     get_emoticon_dict = emoticon_translations[get_emoticon]
-    
-# #     get_emoticon_dict[emoticon_ary[0]] = [emoticon_ary[1]]
-
-# #   end
-  emoticon_translations
+   new_hash
+  end
 end
 
 
-
-
-def get_japanese_emoticon(file_path, emoticon)
-  result = load_library(file_path)['get_emoticon'][emoticon]
+ def get_japanese_emoticon	def get_japanese_emoticon(file_path, emoticon)
+  # code goes here	  result = load_library(file_path)['get_emoticon'][emoticon]
   result ? result : "Sorry, that emoticon was not found"
-end
+end	end
 
 
-def get_english_meaning(file_path, emoticon)
-  result = load_library(file_path)['get_meaning'][emoticon]
+ def get_english_meaning	def get_english_meaning(file_path, emoticon)
+  # code goes here	  result = load_library(file_path)['get_meaning'][emoticon]
   result ? result : "Sorry, that emoticon was not found"
-end
+end 	end 
