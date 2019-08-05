@@ -18,7 +18,7 @@ def load_library(file_path)
 # #     get_emoticon_dict[emoticon_ary[0]] = [emoticon_ary[1]]
 
 # #   end
-#   emoticon_translations
+  emoticon_translations
 end
 
 
